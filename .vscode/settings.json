@@ -1,0 +1,19 @@
+{
+  "eslint.options": {
+    "extensions": [".ts", ".html"]
+  },
+  "eslint.format.enable": true,
+  "eslint.probe": [
+    "javascript",
+    "typescript",
+    "html",
+    "markdown"
+  ],
+  "eslint.run": "onType",
+  "eslint.validate": [
+    "typescript",
+    "html"
+  ],
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file"
+}
