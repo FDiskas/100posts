@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'zivver';
+  localesList = [
+    { code: 'en-US', label: 'English' },
+    { code: 'lt', label: 'Lietuvių' },
+  ];
 }
