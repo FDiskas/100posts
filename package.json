@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --hmr",
     "build": "ng build",
     "build:prod": "ng build --prod",
     "pretest": "npm run lint",
@@ -43,6 +43,7 @@
     "@angular-eslint/template-parser": "0.4.0-beta.2",
     "@angular/cli": "~10.1.2",
     "@angular/compiler-cli": "~10.1.2",
+    "@angularclass/hmr": "^3.0.0",
     "@briebug/cypress-schematic": "^4.0.3",
     "@cypress/webpack-preprocessor": "5.4.5",
     "@types/jasmine": "~3.5.0",
