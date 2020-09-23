@@ -1,19 +1,9 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
-    "strict": true,
-    "baseUrl": "../node_modules",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "types": [
-      "cypress",
-      "node"
-    ],
-    "esModuleInterop": true
+    "lib": ["es5", "dom"],
+    "types": ["cypress", "node"],
+    "resolveJsonModule": true
   },
-  "include": [
-    "**/*.ts"
-  ]
+  "include": ["**/*.ts"]
 }

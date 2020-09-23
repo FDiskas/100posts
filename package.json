@@ -1,6 +1,7 @@
 {
   "name": "zivver",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,11 +12,10 @@
     "posttest": "npm run format",
     "lint": "ng lint --fix",
     "e2e": "ng e2e",
-    "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,css,md}\"",
+    "format": "prettier --loglevel warn --write \"**/*.{ts,js,scss,md,html}\"",
     "test:watch": "jest --watch",
     "e2e:ci": "ng e2e --mode console"
   },
-  "private": true,
   "dependencies": {
     "@angular-builders/jest": "^10.0.1",
     "@angular/animations": "~10.1.2",
@@ -29,7 +29,6 @@
     "@angular/platform-browser-dynamic": "~10.1.2",
     "@angular/router": "~10.1.2",
     "@angular/service-worker": "~10.1.2",
-    "@briebug/jest-schematic": "^2.2.0",
     "@ngchile/cypress-cucumber-schematics": "^1.0.0-rc.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
@@ -48,7 +47,6 @@
     "@cypress/webpack-preprocessor": "5.4.5",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
-    "@types/jest": "26.0.14",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "3.9.0",
     "@typescript-eslint/eslint-plugin-tslint": "^4.2.0",
@@ -60,10 +58,12 @@
     "eslint-plugin-jsdoc": "^30.5.1",
     "eslint-plugin-prefer-arrow": "^1.2.2",
     "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "jest": "26.4.2",
     "jest-preset-angular": "8.3.1",
+    "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "protractor": "~7.0.0",
     "ts-loader": "8.0.4",
@@ -108,5 +108,14 @@
   },
   "cypress-cucumber-preprocessor": {
     "step_definitions": "./e2e/step_definitions"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc --noEmit && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js}": "eslint --fix",
+    "*.{js,json,scss,css,md,html}": "prettier --write"
   }
 }

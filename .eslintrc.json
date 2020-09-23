@@ -1,6 +1,9 @@
 {
   "root": true,
   "plugins": ["prettier"],
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
   "overrides": [
     {
       "files": ["*.ts"],
@@ -8,39 +11,23 @@
         "project": ["tsconfig.*?.json", "e2e/tsconfig.json"],
         "createDefaultProgram": true
       },
-      "extends": [
-        "plugin:@angular-eslint/recommended",
-        "prettier",
-        "prettier/@typescript-eslint"
-      ],
+      "extends": ["plugin:@angular-eslint/recommended", "prettier", "prettier/@typescript-eslint"],
       "rules": {
         "prettier/prettier": "error",
-        "@angular-eslint/directive-selector": [
-          "error",
-          { "type": "attribute", "prefix": "app", "style": "camelCase" }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          { "type": "element", "prefix": "app", "style": "kebab-case" }
-        ]
+        "@angular-eslint/directive-selector": ["error", { "type": "attribute", "prefix": "app", "style": "camelCase" }],
+        "@angular-eslint/component-selector": ["error", { "type": "element", "prefix": "app", "style": "kebab-case" }]
       }
     },
     {
       "files": ["*.component.html"],
-      "extends": [
-        "plugin:@angular-eslint/template/recommended",
-        "prettier",
-        "prettier/@typescript-eslint"
-      ],
+      "extends": ["plugin:@angular-eslint/template/recommended", "prettier", "prettier/@typescript-eslint"],
       "rules": {
         "prettier/prettier": "error"
       }
     },
     {
       "files": ["*.scss"],
-      "extends": [
-        "prettier"
-      ],
+      "extends": ["prettier"],
       "rules": {
         "prettier/prettier": "error"
       }
