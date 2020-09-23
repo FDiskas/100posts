@@ -1,0 +1,13 @@
+{
+  "locales": [
+    "lt"
+  ],
+  "editor": {
+    "emptyTranslationHandling": "fallback-to-source",
+    "messageLocations": [
+      "src/app/translations/messages.xlf"
+    ],
+    "mode": "default",
+    "translationFileNamePattern": "${name}.${lang}"
+  }
+}

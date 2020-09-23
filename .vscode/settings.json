@@ -8,5 +8,9 @@
   "eslint.validate": ["typescript", "html"],
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.associations": {
+    ".xtm": "xml",
+    ".ngI18nconfig": "json"
+  }
 }
