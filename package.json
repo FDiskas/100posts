@@ -4,13 +4,11 @@
   "private": true,
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --hmr --open",
+    "start": "ng serve --configuration=en --hmr --open",
     "start:lt": "ng serve --configuration=lt --hmr --open",
     "build": "ng build",
     "build:prod": "ng build --prod --localize",
-    "pretest": "npm run lint",
-    "test": "jest",
-    "posttest": "npm run format",
+    "test": "ng test",
     "lint": "ng lint --fix",
     "e2e": "ng e2e",
     "format": "prettier --loglevel warn --write \"**/*.{ts,js,scss,md,html}\"",
@@ -73,42 +71,6 @@
     "ts-loader": "8.0.4",
     "ts-node": "~8.3.0",
     "typescript": "~4.0.2"
-  },
-  "jest": {
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "<rootDir>/tsconfig.spec.json",
-        "stringifyContentPathRegex": "\\.html$",
-        "astTransformers": {
-          "before": [
-            "jest-preset-angular/build/InlineFilesTransformer",
-            "jest-preset-angular/build/StripStylesTransformer"
-          ]
-        }
-      }
-    },
-    "moduleNameMapper": {
-      "@app/(.*)": "<rootDir>/src/app/$1",
-      "@assets/(.*)": "<rootDir>/src/assets/$1",
-      "@core/(.*)": "<rootDir>/src/app/core/$1",
-      "@env": "<rootDir>/src/environments/environment",
-      "@src/(.*)": "<rootDir>/src/src/$1",
-      "@state/(.*)": "<rootDir>/src/app/state/$1"
-    },
-    "preset": "jest-preset-angular",
-    "roots": [
-      "src"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/setup-jest.ts"
-    ],
-    "snapshotSerializers": [
-      "jest-preset-angular/build/AngularSnapshotSerializer.js",
-      "jest-preset-angular/build/HTMLCommentSerializer.js"
-    ],
-    "transform": {
-      "^.+\\.(ts|js|html)$": "ts-jest"
-    }
   },
   "cypress-cucumber-preprocessor": {
     "step_definitions": "./e2e/step_definitions"
