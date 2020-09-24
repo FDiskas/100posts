@@ -39,7 +39,11 @@
             "lt": {
               "localize": ["lt"]
             },
+            "en": {
+              "localize": ["en-US"]
+            },
             "production": {
+              "localize": ["lt", "en-US"],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -83,6 +87,9 @@
             "lt": {
               "browserTarget": "zivver:build:lt"
             },
+            "en": {
+              "browserTarget": "zivver:build:en"
+            },
             "hmr": {
               "hmr": true,
               "browserTarget": "zivver:build:hmr"
@@ -98,7 +105,9 @@
         },
         "test": {
           "builder": "@angular-builders/jest:run",
-          "options": {}
+          "options": {
+            "unhandledRejections": "strict"
+          }
         },
         "e2e": {
           "builder": "@ngchile/cypress-cucumber-schematics:cypress",
