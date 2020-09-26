@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = '100posts';
+  title = '100posts...';
+
   localesList = [
     { code: 'en-US', label: 'English' },
     { code: 'lt', label: 'Lietuvių' },

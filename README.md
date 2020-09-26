@@ -10,10 +10,11 @@ Inside a project:
 - [yarn](https://classic.yarnpkg.com) is used against [npm](https://www.npmjs.com)
 - Removed [tslint](https://palantir.github.io/tslint) ([deprecated](https://medium.com/palantir/tslint-in-2019-1a144c2317a9)) added [eslint](https://eslint.org) with [prettier](https://prettier.io)
 - Replaced unit tests with [Jest](https://jestjs.io)
-- Replaced e2e with [Cypress](https://www.cypress.io) and includes features
+- Replaced e2e with [Cypress](https://www.cypress.io) and includes Cucumber (Gherkin) language
 - Implemented HMR (hot module replacement)
 - Added multilingual support in angular way
 - Code style using [prettier](https://prettier.io) and [eslint](https://eslint.org)
+- SCSS code style handled by [StyleLint](https://stylelint.io) + [prettier](https://prettier.io)
 - Added git hooks. Before each commit code linting is performed
 - Added PWA (can be installed as desktop app)
 

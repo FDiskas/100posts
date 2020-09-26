@@ -4,6 +4,7 @@
   "rules": {
     "prettier/prettier": true,
     "color-hex-length": "short",
-    "selector-max-id": 2
+    "selector-max-id": 2,
+    "no-descending-specificity": null
   }
 }
