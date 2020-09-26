@@ -4,6 +4,10 @@
   "parserOptions": {
     "ecmaVersion": 6
   },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
   "overrides": [
     {
       "files": ["*.ts"],
@@ -20,16 +24,10 @@
     },
     {
       "files": ["*.component.html"],
-      "extends": ["plugin:@angular-eslint/template/recommended", "prettier", "prettier/@typescript-eslint"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "plugins": ["eslint-plugin-html"],
       "rules": {
-        "prettier/prettier": "error"
-      }
-    },
-    {
-      "files": ["*.scss"],
-      "extends": ["prettier"],
-      "rules": {
-        "prettier/prettier": "error"
+        "max-len": ["error", { "code": 140 }]
       }
     },
     {

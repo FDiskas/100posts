@@ -1,8 +1,10 @@
 {
   "recommendations": [
     "cyrilletuzi.angular-schematics",
+    "roman-lo.vscode-ng-i18n-editor",
     "angular.ng-template",
     "dbaeumer.vscode-eslint",
-    "tomoki1207.pdf"
+    "hex-ci.stylelint-plus",
+    "alexkrechik.cucumberautocomplete"
   ]
 }
