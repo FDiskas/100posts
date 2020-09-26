@@ -6,16 +6,15 @@
     "ng": "ng",
     "start": "ng serve --configuration=en --hmr --open",
     "start:lt": "ng serve --configuration=lt --hmr --open",
-    "build": "ng build",
+    "build": "ng build --prod --localize",
     "build:prod": "ng build --prod --localize",
     "test": "ng test",
     "lint": "yarn format && ng lint --fix && stylelint src/**/*.scss --fix",
     "e2e": "ng e2e",
     "format": "prettier --loglevel warn --write \"**/*.{ts,js,scss,md,html}\"",
     "test:watch": "jest --watch",
-    "e2e:ci": "ng e2e --mode console",
-    "int:extract": "ng xi18n --ivy",
-    "stylelint-check": "stylelint-config-prettier-check"
+    "e2e:ci": "ng e2e --prod",
+    "int:extract": "ng xi18n --ivy"
   },
   "dependencies": {
     "@angular-builders/jest": "^10.0.1",
@@ -51,14 +50,16 @@
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
-    "@typescript-eslint/eslint-plugin": "3.9.0",
-    "@typescript-eslint/eslint-plugin-tslint": "^4.2.0",
-    "@typescript-eslint/parser": "3.9.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
     "cypress-cucumber-preprocessor": "2.5.5",
     "eslint": "^7.6.0",
+    "eslint-config-airbnb-typescript": "^10.0.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-html": "^6.1.0",
+    "eslint-plugin-cypress": "^2.11.1",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jasmine": "^4.1.1",
+    "eslint-plugin-jest": "^24.0.2",
     "eslint-plugin-jsdoc": "^30.5.1",
     "eslint-plugin-prefer-arrow": "^1.2.2",
     "eslint-plugin-prettier": "^3.1.4",
@@ -90,7 +91,8 @@
     }
   },
   "lint-staged": {
-    "*.{ts,js}": "eslint --fix",
-    "*.{js,json,scss,css,md,html}": "prettier --write"
+    "*.{ts}": "eslint --fix",
+    "*.{js,json,scss,css,md,html}": "prettier --write",
+    "*.{scss,css}": "stylelint --fix"
   }
 }

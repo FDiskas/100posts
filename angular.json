@@ -36,6 +36,14 @@
             "scripts": []
           },
           "configurations": {
+            "hmr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.hmr.ts"
+                }
+              ]
+            },
             "lt": {
               "localize": ["lt"]
             },
@@ -112,19 +120,21 @@
         "e2e": {
           "builder": "@ngchile/cypress-cucumber-schematics:cypress",
           "options": {
-            "devServerTarget": "100posts:serve",
+            "devServerTarget": "100posts:serve:hmr,en",
             "mode": "browser"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "100posts:serve:production"
+              "devServerTarget": "100posts:serve:production,en",
+              "mode": "console"
             }
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.component.html"]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.component.html"],
+            "fix": true
           }
         }
       }
