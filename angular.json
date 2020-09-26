@@ -16,7 +16,7 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "lt": "src/app/translations/messages.lt.xlf"
+          "lt": "src/translations/messages.lt.xlf"
         }
       },
       "architect": {
@@ -100,7 +100,7 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "zivver:build",
-            "outputPath": "src/app/translations"
+            "outputPath": "src/translations"
           }
         },
         "test": {
