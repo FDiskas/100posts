@@ -197,7 +197,7 @@ a:hover {
   border-radius: 40px;
   margin: 8px;
   background-color: white;
-  border: 1px solid #eeeeee;
+  border: 1px solid #eee;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,7 +208,7 @@ a:hover {
 
 .circle-link:hover {
   transform: translateY(-0.25rem);
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 footer {

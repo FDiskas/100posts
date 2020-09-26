@@ -1,6 +1,6 @@
 {
   "eslint.options": {
-    "extensions": [".ts", ".html"]
+    "extensions": [".scss", ".ts", ".html"]
   },
   "eslint.format.enable": true,
   "eslint.probe": ["javascript", "typescript", "html", "markdown"],
@@ -12,5 +12,19 @@
   "files.associations": {
     ".xtm": "xml",
     ".ngI18nconfig": "json"
-  }
+  },
+  "eslint.packageManager": "yarn",
+  "eslint.alwaysShowStatus": true,
+  "eslint.enable": true,
+  "prettier.packageManager": "yarn",
+  "prettier.requireConfig": true,
+  "prettier.resolveGlobalModules": true,
+  "stylelint.enable": true,
+  "css.validate": true,
+  "scss.validate": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "stylelint.autoFixOnSave": true,
+  "stylelint.useLocal": true
 }

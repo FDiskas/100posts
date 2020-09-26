@@ -9,12 +9,13 @@
     "build": "ng build",
     "build:prod": "ng build --prod --localize",
     "test": "ng test",
-    "lint": "ng lint --fix",
+    "lint": "yarn format && ng lint --fix && stylelint src/**/*.scss --fix",
     "e2e": "ng e2e",
     "format": "prettier --loglevel warn --write \"**/*.{ts,js,scss,md,html}\"",
     "test:watch": "jest --watch",
     "e2e:ci": "ng e2e --mode console",
-    "int:extract": "ng xi18n --ivy"
+    "int:extract": "ng xi18n --ivy",
+    "stylelint-check": "stylelint-config-prettier-check"
   },
   "dependencies": {
     "@angular-builders/jest": "^10.0.1",
@@ -56,6 +57,7 @@
     "cypress-cucumber-preprocessor": "2.5.5",
     "eslint": "^7.6.0",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsdoc": "^30.5.1",
     "eslint-plugin-prefer-arrow": "^1.2.2",
@@ -68,6 +70,13 @@
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "protractor": "~7.0.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-airbnb": "^0.0.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.18.0",
     "ts-loader": "8.0.4",
     "ts-node": "~8.3.0",
     "typescript": "~4.0.2"

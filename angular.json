@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "zivver": {
+    "100posts": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -78,28 +78,28 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "zivver:build"
+            "browserTarget": "100posts:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "zivver:build:production"
+              "browserTarget": "100posts:build:production"
             },
             "lt": {
-              "browserTarget": "zivver:build:lt"
+              "browserTarget": "100posts:build:lt"
             },
             "en": {
-              "browserTarget": "zivver:build:en"
+              "browserTarget": "100posts:build:en"
             },
             "hmr": {
               "hmr": true,
-              "browserTarget": "zivver:build:hmr"
+              "browserTarget": "100posts:build:hmr"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "zivver:build",
+            "browserTarget": "100posts:build",
             "outputPath": "src/translations"
           }
         },
@@ -112,12 +112,12 @@
         "e2e": {
           "builder": "@ngchile/cypress-cucumber-schematics:cypress",
           "options": {
-            "devServerTarget": "zivver:serve",
+            "devServerTarget": "100posts:serve",
             "mode": "browser"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "zivver:serve:production"
+              "devServerTarget": "100posts:serve:production"
             }
           }
         },
@@ -130,5 +130,5 @@
       }
     }
   },
-  "defaultProject": "zivver"
+  "defaultProject": "100posts"
 }
