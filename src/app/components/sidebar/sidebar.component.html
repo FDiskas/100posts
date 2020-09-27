@@ -22,7 +22,7 @@
 
       <button mat-button [matMenuTriggerFor]="menu"><mat-icon>language</mat-icon></button>
       <mat-menu #menu="matMenu">
-        <a *ngFor="let locale of localesList" [href]="locale.code" mat-menu-item>{{ locale.label }}</a>
+        <a *ngFor="let locale of localesList" [href]="locale.location" mat-menu-item>{{ locale.label }}</a>
       </mat-menu>
     </mat-toolbar>
     <router-outlet></router-outlet>
