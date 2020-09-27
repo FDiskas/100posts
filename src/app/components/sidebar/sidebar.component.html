@@ -1,0 +1,30 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport mode="over" [opened]="false">
+    <mat-toolbar i18n>Navigation</mat-toolbar>
+    <mat-nav-list *ngFor="let menuItem of menuItems">
+      <a
+        mat-list-item
+        color="primary"
+        [routerLink]="menuItem.path"
+        routerLinkActive="active"
+        (click)="drawer.toggle()"
+        >{{ menuItem.name }}</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content fixedInViewport>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>{{ title }}</span>
+      <span class="spacer"></span>
+
+      <button mat-button [matMenuTriggerFor]="menu"><mat-icon>language</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <a *ngFor="let locale of localesList" [href]="locale.code" mat-menu-item>{{ locale.label }}</a>
+      </mat-menu>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
