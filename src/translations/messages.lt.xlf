@@ -50,6 +50,46 @@
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="a0fdbb96dd88f013acf48e37fcbab25550b30d5c" datatype="html">
+        <source>Navigation</source>
+        <target state="signed-off">Navigacija</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d8eb09c5b6c1410dfb40a82412aa40cdb21977b8" datatype="html">
+        <source>When to use</source>
+        <target state="signed-off">Kada naudoti</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/welcome/welcome.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d5c73b3cf7fe880e38c987940cc2aff67a845280" datatype="html">
+        <source>Posts</source>
+        <target state="signed-off">Straipsniai</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/posts/posts.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <target state="signed-off">Pagrindinis</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1199882264645870301" datatype="html">
+        <source>Posts</source>
+        <target state="signed-off">Straipsniai</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app-routing.module.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>
