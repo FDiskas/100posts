@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,8 +11,10 @@ export class AppComponent {
 
   loading = false;
 
+  constructor(private location: Location) {}
+
   localesList = [
-    { code: 'en-US', label: 'English' },
-    { code: 'lt', label: 'Lietuvių' },
+    { location: this.location.prepareExternalUrl('/en-US'), label: 'English' },
+    { location: this.location.prepareExternalUrl('lt'), label: 'Lietuvių' },
   ];
 }
