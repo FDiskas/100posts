@@ -7,7 +7,7 @@ export const routes: Routes = [
     path: 'welcome',
     component: WelcomeComponent,
     data: {
-      name: 'Home',
+      name: $localize`Home`,
     },
     pathMatch: 'full',
   },
@@ -20,7 +20,7 @@ export const routes: Routes = [
     path: 'posts',
     loadChildren: async () => (await import('./pages/posts/posts.module')).PostsModule,
     data: {
-      name: 'Posts',
+      name: $localize`Posts`,
     },
     pathMatch: 'full',
   },
