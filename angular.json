@@ -101,6 +101,10 @@
             },
             "en": {
               "browserTarget": "100posts:build:en"
+            },
+            "hmr": {
+              "hmr": true,
+              "browserTarget": "100posts:build:en"
             }
           }
         },
@@ -120,7 +124,7 @@
         "e2e": {
           "builder": "@ngchile/cypress-cucumber-schematics:cypress",
           "options": {
-            "devServerTarget": "100posts:serve:en",
+            "devServerTarget": "100posts:serve:en,hmr",
             "mode": "browser"
           },
           "configurations": {

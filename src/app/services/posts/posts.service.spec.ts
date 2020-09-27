@@ -1,23 +1,19 @@
-import { JsonpClientBackend, HttpBackend } from '@angular/common/http';
+import { HttpBackend } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { PostsService } from './posts.service';
 
 describe('PostsService', () => {
   let service: PostsService;
-  let httpMock: HttpTestingController;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      // Use the HttpBackend instead of the JsonpClientBackend
-      // https://github.com/angular/angular/issues/20878
-      providers: [PostsService, { provide: JsonpClientBackend, useExisting: HttpBackend }],
+      providers: [PostsService, HttpBackend],
     });
 
     service = TestBed.inject(PostsService);
-    httpMock = TestBed.inject(HttpTestingController);
   });
 
   it('should be created', () => {
@@ -31,9 +27,6 @@ describe('PostsService', () => {
       service.getData().subscribe((data) => {
         expect(data).toEqual(dummyData);
       });
-      const req = httpMock.expectOne((request) => request.url === service.config.postsApiUrl);
-      expect(req.request.method).toBe('JSONP');
-      req.flush(dummyData);
     });
   });
 });

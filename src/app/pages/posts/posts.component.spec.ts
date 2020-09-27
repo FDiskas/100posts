@@ -7,6 +7,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 
+import { HttpBackend } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { PostsComponent } from './posts.component';
 
 describe('PostsComponent', () => {
@@ -25,7 +27,9 @@ describe('PostsComponent', () => {
           MatGridListModule,
           MatIconModule,
           MatMenuModule,
+          HttpClientTestingModule,
         ],
+        providers: [HttpBackend],
       }).compileComponents();
     }),
   );

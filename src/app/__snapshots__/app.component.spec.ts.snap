@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should render menu 1`] = `
+<div
+  id="root2"
+  ng-version="10.1.3"
+>
+  <div
+    class="container"
+  >
+    <header>
+      <app-loading>
+        
+      </app-loading>
+    </header>
+    <nav />
+    <main>
+      <app-side-bar
+        ng-reflect-locales-list="[object Object],[object Object"
+        ng-reflect-title="100posts"
+      >
+        <mat-sidenav-container
+          class="sidenav-container mat-drawer-container mat-sidenav-container"
+        >
+          
+          <div
+            class="mat-drawer-backdrop ng-star-inserted"
+          />
+          <div
+            aria-hidden="true"
+            class="cdk-visually-hidden cdk-focus-trap-anchor"
+          />
+          <mat-sidenav
+            class="sidenav mat-drawer mat-sidenav ng-tns-c18-0 ng-trigger ng-trigger-transform mat-drawer-over mat-sidenav-fixed ng-star-inserted"
+            fixedinviewport=""
+            mode="over"
+            ng-reflect-fixed-in-viewport=""
+            ng-reflect-mode="over"
+            ng-reflect-opened="false"
+            style="top:0px;bottom:0px;box-shadow:none;visibility:hidden;0:top;1:bottom;2:box-shadow;3:visibility;"
+            tabindex="-1"
+          >
+            <div
+              class="mat-drawer-inner-container"
+            >
+              <mat-toolbar
+                class="mat-toolbar mat-toolbar-single-row"
+              >
+                Navigation
+              </mat-toolbar>
+              
+              <mat-nav-list
+                class="mat-nav-list mat-list-base ng-star-inserted"
+                role="navigation"
+                style=""
+              >
+                <a
+                  class="mat-list-item mat-focus-indicator"
+                  color="primary"
+                  href="/welcome"
+                  mat-list-item=""
+                  ng-reflect-router-link="welcome"
+                  ng-reflect-router-link-active="active"
+                  routerlinkactive="active"
+                >
+                  <div
+                    class="mat-list-item-content"
+                  >
+                    <div
+                      class="mat-list-item-ripple mat-ripple"
+                      mat-ripple=""
+                      ng-reflect-disabled="false"
+                      ng-reflect-trigger="http://localhost/welcome"
+                    />
+                    <div
+                      class="mat-list-text"
+                    />
+                    Home
+                  </div>
+                </a>
+              </mat-nav-list>
+              <mat-nav-list
+                class="mat-nav-list mat-list-base ng-star-inserted"
+                role="navigation"
+                style=""
+              >
+                <a
+                  class="mat-list-item mat-focus-indicator"
+                  color="primary"
+                  href="/posts"
+                  mat-list-item=""
+                  ng-reflect-router-link="posts"
+                  ng-reflect-router-link-active="active"
+                  routerlinkactive="active"
+                >
+                  <div
+                    class="mat-list-item-content"
+                  >
+                    <div
+                      class="mat-list-item-ripple mat-ripple"
+                      mat-ripple=""
+                      ng-reflect-disabled="false"
+                      ng-reflect-trigger="http://localhost/posts"
+                    />
+                    <div
+                      class="mat-list-text"
+                    />
+                    Posts
+                  </div>
+                </a>
+              </mat-nav-list>
+            </div>
+          </mat-sidenav>
+          <div
+            aria-hidden="true"
+            class="cdk-visually-hidden cdk-focus-trap-anchor"
+          />
+          <mat-sidenav-content
+            class="mat-drawer-content mat-sidenav-content"
+            fixedinviewport=""
+          >
+            <mat-toolbar
+              class="mat-toolbar mat-primary mat-toolbar-single-row"
+              color="primary"
+              ng-reflect-color="primary"
+            >
+              <button
+                aria-label="Toggle sidenav"
+                class="mat-focus-indicator mat-icon-button mat-button-base"
+                mat-icon-button=""
+                type="button"
+              >
+                <span
+                  class="mat-button-wrapper"
+                >
+                  <mat-icon
+                    aria-hidden="true"
+                    aria-label="Side nav toggle icon"
+                    class="mat-icon notranslate material-icons mat-icon-no-color"
+                    data-mat-icon-type="font"
+                    role="img"
+                  >
+                    menu
+                  </mat-icon>
+                </span>
+                <span
+                  class="mat-button-ripple mat-ripple mat-button-ripple-round"
+                  matripple=""
+                  ng-reflect-centered="true"
+                  ng-reflect-disabled="false"
+                  ng-reflect-trigger="[object HTMLButtonElement]"
+                />
+                <span
+                  class="mat-button-focus-overlay"
+                />
+              </button>
+              <span>
+                100posts
+              </span>
+              <span
+                class="spacer"
+              />
+              <button
+                aria-haspopup="true"
+                class="mat-focus-indicator mat-menu-trigger mat-button mat-button-base"
+                mat-button=""
+                ng-reflect-menu="[object Object]"
+              >
+                <span
+                  class="mat-button-wrapper"
+                >
+                  <mat-icon
+                    aria-hidden="true"
+                    class="mat-icon notranslate material-icons mat-icon-no-color"
+                    data-mat-icon-type="font"
+                    role="img"
+                  >
+                    language
+                  </mat-icon>
+                </span>
+                <span
+                  class="mat-button-ripple mat-ripple"
+                  matripple=""
+                  ng-reflect-centered="false"
+                  ng-reflect-disabled="false"
+                  ng-reflect-trigger="[object HTMLButtonElement]"
+                />
+                <span
+                  class="mat-button-focus-overlay"
+                />
+              </button>
+              <mat-menu
+                class="ng-tns-c23-1 ng-star-inserted"
+              >
+                
+              </mat-menu>
+            </mat-toolbar>
+            <router-outlet />
+          </mat-sidenav-content>
+          
+        </mat-sidenav-container>
+      </app-side-bar>
+    </main>
+    <aside />
+    <footer />
+  </div>
+</div>
+`;
