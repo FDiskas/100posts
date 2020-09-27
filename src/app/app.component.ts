@@ -14,7 +14,7 @@ export class AppComponent {
   constructor(@Inject(DOCUMENT) private readonly document: any, private readonly locationStrategy: LocationStrategy) {}
 
   localesList = [
-    { location: `${this.document.location.origin}/${this.locationStrategy.getBaseHref()}en-US/`, label: 'English' },
-    { location: `${this.document.location.origin}/${this.locationStrategy.getBaseHref()}lt`, label: 'Lietuvių' },
+    { location: `${this.document.location.origin}${this.locationStrategy.getBaseHref()}../en-US/`, label: 'English' },
+    { location: `${this.document.location.origin}${this.locationStrategy.getBaseHref()}../lt`, label: 'Lietuvių' },
   ];
 }
