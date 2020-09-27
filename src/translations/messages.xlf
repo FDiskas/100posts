@@ -23,11 +23,18 @@
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="d8eb09c5b6c1410dfb40a82412aa40cdb21977b8" datatype="html">
-        <source>When to use</source>
+      <trans-unit id="8e7d23d6b05ecf1ae1b17d9881f4f5d1cc4ff33e" datatype="html">
+        <source>How to use</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/welcome/welcome.component.html</context>
           <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="786799092a588e099272fc33f43a0246ddabc156" datatype="html">
+        <source>Welcome to the Posts Angular assignment. Please click Menu -&gt; Posts to proceed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/welcome/welcome.component.html</context>
+          <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d5c73b3cf7fe880e38c987940cc2aff67a845280" datatype="html">
