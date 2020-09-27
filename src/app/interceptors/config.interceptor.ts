@@ -9,6 +9,7 @@ export const loadConfig = (http: HttpClient, config: IConfig) => {
         .get('assets/config.json')
         .pipe(
           map((x: IConfig) => {
+            // eslint-disable-next-line no-param-reassign
             config.postsApiUrl = x.postsApiUrl;
             resolve(true);
           }),
