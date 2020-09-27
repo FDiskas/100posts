@@ -17,11 +17,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: Build
+      - name: Tests
         run: |
           yarn
           yarn test
           yarn e2e:ci
+
+      - name: Build
+        run: |
           yarn build --base-href=/100posts/
 
       - name: Deploy
