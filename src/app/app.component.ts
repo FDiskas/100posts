@@ -1,5 +1,5 @@
-import { Location } from '@angular/common';
-import { Component } from '@angular/core';
+import { DOCUMENT, LocationStrategy } from '@angular/common';
+import { Component, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +11,10 @@ export class AppComponent {
 
   loading = false;
 
-  constructor(private location: Location) {}
+  constructor(@Inject(DOCUMENT) private readonly document: any, private readonly locationStrategy: LocationStrategy) {}
 
   localesList = [
-    { location: this.location.prepareExternalUrl('/en-US'), label: 'English' },
-    { location: this.location.prepareExternalUrl('lt'), label: 'Lietuvių' },
+    { location: `${this.document.location.origin}/${this.locationStrategy.getBaseHref()}en-US/`, label: 'English' },
+    { location: `${this.document.location.origin}/${this.locationStrategy.getBaseHref()}lt`, label: 'Lietuvių' },
   ];
 }

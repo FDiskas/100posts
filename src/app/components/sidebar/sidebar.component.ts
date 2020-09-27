@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { routes } from 'app/app-routing.module';
-import { APP_BASE_HREF } from '@angular/common';
 
 @Component({
   selector: 'app-side-bar',
