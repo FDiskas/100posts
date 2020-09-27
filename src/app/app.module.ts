@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
@@ -43,6 +44,7 @@ import { LoadingComponent } from './components/loading/loading/loading.component
     MatCardModule,
     MatMenuModule,
     MatProgressBarModule,
+    MatSelectModule,
     HttpClientModule,
     HttpClientJsonpModule,
   ],
