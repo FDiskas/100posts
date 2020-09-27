@@ -16,7 +16,9 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "lt": "src/translations/messages.lt.xlf"
+          "lt": {
+            "translation": "src/translations/messages.lt.xlf"
+          }
         }
       },
       "architect": {
@@ -30,9 +32,19 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets", "src/manifest.webmanifest"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/manifest.webmanifest",
+              {
+                "input": "src/assets/",
+                "glob": "**/index.html",
+                "output": "."
+              }
+            ],
             "styles": ["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css", "src/styles.scss"],
             "allowedCommonJsDependencies": ["zone.js"],
+            "showCircularDependencies": true,
             "scripts": []
           },
           "configurations": {

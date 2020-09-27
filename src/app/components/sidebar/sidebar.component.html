@@ -18,6 +18,12 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>{{ title }}</span>
+      <span class="spacer"></span>
+
+      <button mat-button [matMenuTriggerFor]="menu"><mat-icon>language</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <a *ngFor="let locale of localesList" [href]="locale.code" mat-menu-item>{{ locale.label }}</a>
+      </mat-menu>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
