@@ -19,3 +19,7 @@ What's inside?:
 - Added PWA (can be installed as desktop app)
 - Lazy Loaded modules
 - Demo with Navigation
+
+## Demo
+
+![demo](src/assets/demo.gif)
