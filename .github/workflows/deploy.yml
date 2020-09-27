@@ -20,6 +20,8 @@ jobs:
       - name: Build
         run: |
           yarn
+          yarn test
+          yarn e2e:ci
           yarn build --base-href=/100posts/
 
       - name: Deploy
