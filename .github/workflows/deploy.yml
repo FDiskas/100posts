@@ -9,12 +9,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: All things angular
-        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1
+
+      - uses: actions/cache@v2
         with:
-          github_access_token: ${{ secrets.GITHUB_TOKEN }} # see the Configuration section for how you can create secrets
-          build_configuration: production # The build environment for the app. please look configurations in your angular.json
-          base_href: /100posts/ # make sure this corresponds to https://<your_username>.github.io/<base_href>/
-          deploy_branch: gh-pages # The branch the action should deploy to.
-          angular_dist_build_folder: dist # The folder where your project is supposed to be after running ng build by the action.
-          run_lint: true
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Build
+        run: |
+          yarn
+          yarn build --base-href=/100posts/
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist
