@@ -20,6 +20,7 @@ jobs:
       - name: Testing
         run: |
           yarn
+          yarn cypress install
           yarn test
           yarn e2e:ci
 
