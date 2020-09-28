@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { PostsService, IPost } from 'app/services/posts/posts.service';
 import { StoreService } from '../../services/store/store.service';
 
-export interface IPosts extends IPost {
+export interface IPostCard extends IPost {
   cols?: number;
   rows?: number;
 }
@@ -22,7 +22,7 @@ export interface IPosts extends IPost {
   ],
 })
 export class PostsComponent {
-  postsData: Observable<IPosts[]>;
+  postsData: Observable<IPostCard[]>;
 
   showUserID = {};
 

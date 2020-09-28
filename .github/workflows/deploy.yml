@@ -17,12 +17,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: Installing
-        run: |
-          yarn
-
       - name: Testing
         run: |
+          yarn
           yarn test
           yarn e2e:ci
 
