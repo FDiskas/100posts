@@ -1,7 +1,7 @@
 <div class="grid-container">
   <h1 class="mat-h1" i18n>Posts</h1>
   <mat-grid-list cols="10" rowHeight="150px">
-    <mat-grid-tile *ngFor="let post of postsData | async" [colspan]="post.cols" [rowspan]="post.rows">
+    <mat-grid-tile *ngFor="let post of postsData" [colspan]="post.cols" [rowspan]="post.rows">
       <mat-card class="card" *ngIf="!showUserID[post.id]" [@inOutAnimation] (click)="toggleId(post.id)">
         <mat-card-title-group class="card-title">
           <mat-card-subtitle i18n>Post ID</mat-card-subtitle>

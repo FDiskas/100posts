@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { trigger, style, animate, transition } from '@angular/animations';
-import { Observable } from 'rxjs';
 import { PostsService, IPost } from 'app/services/posts/posts.service';
 
 interface IPosts extends IPost {
@@ -21,31 +18,24 @@ interface IPosts extends IPost {
   ],
 })
 export class PostsComponent {
-  postsData: Observable<IPosts[]>;
+  postsData: IPosts[];
 
   showUserID = {};
 
   setData = (data: IPost[]) => {
-    this.postsData = this.breakpointObserver.observe([Breakpoints.XSmall, Breakpoints.Small]).pipe(
-      map(({ matches }) => {
-        if (matches) {
-          return data.map((item) => ({ ...item, cols: 10, rows: 1 }));
-        }
-
-        return data.map((item) => ({ ...item, cols: 1, rows: 1 }));
-      }),
-    );
+    this.postsData = data.map((item) => ({ ...item, cols: 1, rows: 1 }));
   };
 
-  getData = async () => this.postsData;
+  getData = () => this.postsData;
 
   toggleId = (postId: number) => {
     this.showUserID[postId] = !this.showUserID[postId];
   };
 
-  constructor(private breakpointObserver: BreakpointObserver, private posts: PostsService) {
-    this.posts.getData().subscribe((res) => {
-      this.setData(res);
-    });
+  constructor(private posts: PostsService) {
+    this.posts
+      .getData()
+      .toPromise()
+      .then((res) => this.setData(res));
   }
 }

@@ -14,17 +14,14 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS, HttpClientJsonpModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
-import { ErrorInterceptor } from './interceptors/error.interceptor';
 import { loadConfig } from './interceptors/config.interceptor';
 import { ConfigService } from './services/config/config.service';
-import { LoadingService } from './services/loading/loading.service';
-import { LoaderInterceptor } from './interceptors/loading.interceptor';
 import { LoadingComponent } from './components/loading/loading/loading.component';
 
 @NgModule({
@@ -49,17 +46,7 @@ import { LoadingComponent } from './components/loading/loading/loading.component
     HttpClientJsonpModule,
   ],
   providers: [
-    LoadingService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: LoaderInterceptor,
-      multi: true,
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ErrorInterceptor,
-      multi: true,
-    },
+    // https://github.com/angular/angular/blob/96aa14df016d447683f13ddd4257e594e569769d/packages/common/http/src/interceptor.ts#L10
     {
       provide: APP_INITIALIZER,
       useFactory: loadConfig,

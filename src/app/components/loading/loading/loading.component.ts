@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { LoadingService } from 'app/services/loading/loading.service';
-import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-loading',
@@ -12,7 +11,7 @@ export class LoadingComponent {
 
   mode = 'indeterminate';
 
-  isLoading: Subject<boolean> = this.loadingService.isLoading;
+  isLoading: boolean = this.loadingService.isLoading;
 
   constructor(private loadingService: LoadingService) {}
 }
