@@ -36,6 +36,8 @@ export class PostsComponent {
     this.posts
       .getData()
       .toPromise()
-      .then((res) => this.setData(res));
+      .then((res) => {
+        return this.setData(res);
+      });
   }
 }

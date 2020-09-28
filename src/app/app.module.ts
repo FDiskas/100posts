@@ -13,7 +13,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { HttpClient, HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { environment } from '../environments/environment';
@@ -22,10 +21,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { loadConfig } from './interceptors/config.interceptor';
 import { ConfigService } from './services/config/config.service';
-import { LoadingComponent } from './components/loading/loading/loading.component';
 
 @NgModule({
-  declarations: [AppComponent, SidebarComponent, WelcomeComponent, LoadingComponent],
+  declarations: [AppComponent, SidebarComponent, WelcomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -40,7 +38,6 @@ import { LoadingComponent } from './components/loading/loading/loading.component
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    MatProgressBarModule,
     MatSelectModule,
     HttpClientModule,
     HttpClientJsonpModule,
