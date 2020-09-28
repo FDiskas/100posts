@@ -1,6 +1,8 @@
-.container {
-  height: 100vh;
-}
-main {
-  height: 100vh;
+:host {
+  .container {
+    height: 100vh;
+  }
+  main {
+    height: 100vh;
+  }
 }

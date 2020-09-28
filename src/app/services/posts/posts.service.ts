@@ -18,7 +18,10 @@ export class PostsService {
   constructor(private http: HttpClient, private configService: ConfigService) {}
 
   getData() {
-    // return this.http.jsonp<IPost[]>(this.configService.postsApiUrl, 'callback');
+    /**
+     * If endpoint does not allow cross origin requests but has JSONP implementation use jsonp instead
+     * @example: return this.http.jsonp<IPost[]>(this.configService.postsApiUrl, 'callback');
+     */
     return this.http.get<IPost[]>(this.configService.postsApiUrl);
   }
 }

@@ -4,8 +4,9 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { trigger, style, animate, transition } from '@angular/animations';
 import { Observable } from 'rxjs';
 import { PostsService, IPost } from 'app/services/posts/posts.service';
+import { StoreService } from '../../services/store/store.service';
 
-interface IPosts extends IPost {
+export interface IPosts extends IPost {
   cols?: number;
   rows?: number;
 }
@@ -43,9 +44,18 @@ export class PostsComponent {
     this.showUserID[postId] = !this.showUserID[postId];
   };
 
-  constructor(private breakpointObserver: BreakpointObserver, private posts: PostsService) {
-    this.posts.getData().subscribe((res) => {
-      this.setData(res);
-    });
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private posts: PostsService,
+    private store: StoreService,
+  ) {
+    if (!this.store.posts.length) {
+      this.posts.getData().subscribe((res) => {
+        this.store.posts = res;
+        this.setData(res);
+      });
+    } else {
+      this.setData(this.store.posts);
+    }
   }
 }
