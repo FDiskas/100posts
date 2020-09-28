@@ -17,17 +17,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: Tests
+      - name: Installing
         run: |
           yarn
+
+      - name: Testing
+        run: |
           yarn test
           yarn e2e:ci
 
-      - name: Build
+      - name: Building
         run: |
           yarn build --base-href=/100posts/
 
-      - name: Deploy
+      - name: Deploying
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
