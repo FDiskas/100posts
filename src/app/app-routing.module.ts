@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { RedirectGuardComponent } from './services/redirect/RedirectGuard';
 
 export const routes: Routes = [
   {
@@ -23,6 +24,15 @@ export const routes: Routes = [
       name: $localize`Posts`,
     },
     pathMatch: 'full',
+  },
+  {
+    path: 'github',
+    canActivate: [RedirectGuardComponent],
+    component: RedirectGuardComponent,
+    data: {
+      name: 'GitHub',
+      externalUrl: 'https://github.com/FDiskas/100posts',
+    },
   },
 ];
 

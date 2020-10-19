@@ -26,6 +26,7 @@ import { ConfigService } from './services/config/config.service';
 import { LoadingService } from './services/loading/loading.service';
 import { LoaderInterceptor } from './interceptors/loading.interceptor';
 import { LoadingComponent } from './components/loading/loading/loading.component';
+import { RedirectGuardComponent } from './services/redirect/RedirectGuard';
 
 @NgModule({
   declarations: [AppComponent, SidebarComponent, WelcomeComponent, LoadingComponent],
@@ -50,6 +51,7 @@ import { LoadingComponent } from './components/loading/loading/loading.component
   ],
   providers: [
     LoadingService,
+    RedirectGuardComponent,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: LoaderInterceptor,
