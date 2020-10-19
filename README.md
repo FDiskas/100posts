@@ -19,7 +19,7 @@ What's inside?:
 - Added PWA (can be installed as desktop app)
 - Lazy Loaded modules
 - Demo with Navigation
-- Auto deployment using github actions and githup pages
+- Auto deployment using github actions and github pages
 
 ## Demo
 
