@@ -1,15 +1,11 @@
-import { Component, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import { CanActivate, ActivatedRouteSnapshot } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
-@Component({
-  selector: 'app-side-bar',
-  template: '',
-})
-export class RedirectGuardComponent implements CanActivate {
+export class RedirectGuard implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot): boolean {
     Object.assign(document.createElement('a'), {
       target: '_blank',

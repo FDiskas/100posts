@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
-import { RedirectGuardComponent } from './services/redirect/RedirectGuard';
+import { RedirectGuard } from './services/redirect/RedirectGuard';
 
 export const routes: Routes = [
   {
@@ -27,8 +27,8 @@ export const routes: Routes = [
   },
   {
     path: 'github',
-    canActivate: [RedirectGuardComponent],
-    component: RedirectGuardComponent,
+    canActivate: [RedirectGuard],
+    component: WelcomeComponent,
     data: {
       name: 'GitHub',
       externalUrl: 'https://github.com/FDiskas/100posts',
