@@ -22,7 +22,7 @@ describe('PostsService', () => {
 
   describe('getData', () => {
     it('should return an Observable<any>', () => {
-      const dummyData = [{ body: 'string', id: 1, title: 'string', userId: 1 }];
+      const dummyData = [{ body: 'test', id: 1, title: 'string', userId: 1 }];
 
       service.getData().subscribe((data) => {
         expect(data).toEqual(dummyData);
