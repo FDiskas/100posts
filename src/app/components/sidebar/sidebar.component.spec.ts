@@ -13,6 +13,7 @@ import { routes } from 'app/app-routing.module';
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from 'app/pages/welcome/welcome.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { RedirectGuardComponent } from 'app/services/redirect/RedirectGuard';
 import { SidebarComponent } from './sidebar.component';
 
 describe('SidebarComponent', () => {
@@ -22,7 +23,7 @@ describe('SidebarComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [SidebarComponent, WelcomeComponent],
+        declarations: [SidebarComponent, WelcomeComponent, RedirectGuardComponent],
         imports: [
           BrowserAnimationsModule,
           NoopAnimationsModule,
